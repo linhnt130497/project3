@@ -10,13 +10,10 @@ default: &default
   password: <%= ENV["DATABASE_PASSWORD"] %>
 
 development:
-  <<: *default
-  socket:   <%= ENV["DATABASE_SOCKET"] %>
+<<: *default
 
 test:
   <<: *default
-  database: <%= ENV["DATABASE_NAME_TEST"] %>
-  socket:   <%= ENV["DATABASE_SOCKET"] %>
 
 production:
   <<: *default

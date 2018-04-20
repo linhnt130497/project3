@@ -31,3 +31,303 @@
 
 en:
   hello: "Hello world"
+  title: "Edocument"
+  layouts:
+    header:
+      favorites: "List favorites"
+      account: "Account"
+      transaction: "Transaction"
+      add_admin: "New admin"
+      logo: "E-Document"
+      login: "Log in"
+      logout: "Log out"
+      signup: "Sign up"
+      search: "Search"
+      placeholer_search: "search document..."
+      type_doc: "Type Document"
+      users: "Users"
+      profile: "Profile"
+      setting: "Setting"
+      friends: "Friends list"
+      upload: "Upload"
+      history: "History Download"
+      doc_report: "Documents Reported"
+      category: "Categories"
+      ban_user: "Ban user"
+    footer:
+      contact: "Contact"
+      about: "About"
+      author: "The application design by Nguyen Thi Linh"
+  static_page:
+    home:
+      home: "Home"
+      title: "This is Home"
+      document: "Documents"
+  hello: "Hello world"
+  title: "Edocument"
+
+  sessions:
+    new:
+      email: "Email Address"
+      pass: "Password"
+      title: "Log in"
+      btlogin: "Log in"
+      forgot_pass: "forgot password"
+      remember: "Remember me on this computer"
+      sign_up: "New user ?"
+      link_signup: "Sign up now!"
+    flash:
+      error: "Invalid email or password"
+      login_success: "Login Success"
+      not_admin: "User Is Not Admin"
+  shared:
+    error_count: "The form contains"
+    error_text: "error"
+    user_info:
+      friend: "Friend"
+      requested: "Request"
+      pending_accept: "Pending accept"
+      download_times: "Download times"
+      upload_times: "Upload times"
+      coins: "Coins"
+      document_delete: "Document delete"
+  users:
+    add_friend:
+      send_request: "Add friend"
+    new:
+      title: "Sign Up"
+      descrip1: "This will be a signup page for new users."
+      passconfirm: "Confirmation"
+      btncreate: "Create account"
+      create_success: "Create success"
+      create_error: "Can't create create user"
+      not_login: "Not Login"
+    flash:
+      danger_login: "Please login"
+      error_show: "Can't find user"
+      not_correct_user: "Not Correct User"
+    add_friend:
+      send_request: "Add friend"
+    delete_friend:
+      delete_friend: "Delete friend"
+    index:
+      accept: "Accept"
+      title: "Users"
+    edit:
+      title: "Edit"
+      btn_save: "Update"
+      str1: "Edit Profile User"
+    update:
+      success: "Profile updated"
+      admin_success: "Upgrade Admin Success"
+      admin_fail: "Upgrade Admin Fails"
+    show:
+      buy_coin: "Buy coin"
+      placeholer_coin: "Input coin"
+      cost: "Cost per coin:"
+      submit: "Buy coin"
+      title: "Show User"
+      error_message: "Not Found User"
+      friend: "friends"
+      requested: "requested"
+      pending_accept: "pending accept"
+      download_times: "download times"
+      upload_times: "upload times"
+      coins: "coins"
+      title: "Show User"
+      document: "'s Documents"
+      not_have_doc: "No Have Documents"
+      label-cost: Cost per coin"
+    show_friend:
+      confirm: "Are you sure?"
+      del: "Delete"
+    friended:
+      title: "Friends List"
+    user:
+      admin: "Upgrade to Admin"
+      confirm: "Are You Sure ?"
+  friends:
+    destroy:
+      success: "Delete friend success"
+      fail: "Delete friend fail"
+    show:
+      title: "List Request"
+      confirm: "Accept friend"
+      add_arror: "Error accept"
+      success: "accept success"
+    flash:
+      error: "Can't find friend"
+    show_pending:
+      title: "List Peding Accept"
+  documents:
+    destroy:
+      success: "Deleted Document Success"
+      fail: "Not Deleted Document"
+    document:
+      confirm: "Are you sure?"
+      upload_by: "Upload by %{name}"
+      posted: "Posted %{time} Ago"
+      download_times: "Downloads: %{times} times"
+      view_detail: "View Details"
+      save_history: "Error save history"
+      can_not_upload: "you can't upload more than %{count} document in month"
+    document_detail:
+      download_times: "Download times"
+      comments: "Comments"
+      favorite: "Favorite"
+      download: "Download"
+    new:
+      add_category: "Add Your Category"
+      your_category: "Your Name Category..."
+      submit: "Submit"
+    upload_success: "Upload success"
+    upload_error: "Upload error"
+    download_error: "Can't download"
+    error_find: "Can't find document"
+    form:
+      title: "Upload files"
+      btn_upload: "Upload"
+      name_document: "Your Name Document..."
+    show:
+      fail: "Not Found Document"
+    comment_form:
+      comment: "Input comment"
+      btn_comment: "Comment"
+  categories:
+    create:
+      style_invalid: "style category is empty!"
+      error: "error!"
+      save_fail: "Can Not Excute!"
+  search_documents:
+    search_category:
+      not_found: "Not Found Documents"
+    search_name:
+      category: "Category"
+    list_reported:
+      head: "Comments Reported"
+    search_reported:
+      name_doc: "Name Documents"
+      time: "Time"
+      reported: "Reported"
+      comments: "comments"
+      del: "Delete"
+      title: "List Reported"
+  favorites:
+    index:
+      name_doc: "Name Document"
+      time: "Time"
+      favorite: "Favorite"
+    index_users:
+      name_user: User Name
+      time: "Time"
+      title: "List User Favorite"
+  history_downloads:
+    error: "error download"
+    create:
+      not_enough_coin: "Not Enough Coin. Please Buy Coin."
+    index:
+      title: "History Downloads"
+      name_doc: "Name Document"
+      time: "Time"
+  comments:
+    comment:
+      show_reply: "Show comment reply"
+      del: "delete"
+      comment_success: "Comment success"
+      comment_error: "Comment error"
+      del_success: "Delete comment"
+      del_error: "Delete error"
+      find_error: "Can't find comment"
+    reply_comment_form:
+      comment: "Input your comment"
+      reply: "Reply"
+    modal_report:
+      head: "Report"
+      submit: "Report"
+    report:
+      reported: "Reported"
+      report: "Report"
+  transaction:
+    choose_error: "Please choose buy type"
+    error_coin: "Coin must > 0"
+    buy_error: "Buy error"
+    save_fail: "Save fail"
+  favorite:
+    btn_add: "Favorite"
+    btn_un: "Unfavorite"
+    add_success: "Add success"
+    add_error: "Add error"
+    un_success: "Unfavorite success"
+    un_error: "Unfavorite error"
+    error_find: "Can't find favorite"
+  user_mailer:
+    static_end_month:
+      name: "Name"
+      coin: "Coins"
+      cost: "Cost Per Coin"
+      time: "Time"
+      head: "Statistic Month:"
+      introduce: "This is statistic of month"
+      total: "Revenue Total:"
+      subject: "statistic end of month"
+    buy_coin:
+      greeting: "Thank you for your transactions!"
+      content: "You were bought: %{coin} with cost per coin: %{cost}"
+      subject: "Confirm Buy Coin"
+    mail_user:
+      title: "E-document"
+      notice: "You not login e-document in three day"
+    added_coin:
+      title: "Transaction Success"
+      greeting: "Your transaction was success"
+      content: "You were bought: %{coin}. Current coins are %{coin_current}"
+      subject: "Added Coin"
+    ignore_transaction:
+      subject: "Ignore Transaction"
+      greeting: "Your transaction was failure"
+      content: "Your transaction at %{time} with %{coin} coins was ignored"
+
+  document_mailer:
+    upload_success:
+      title: "E-document"
+      notice: "Your document has been uploaded"
+  admin:
+    not_admin: "You Aren't Admin"
+    categories:
+      table_category:
+        name: "Name"
+        time: "Created At"
+        number_document: "Number Documents"
+        command: "Command"
+        own: "Own"
+      table_category:
+        title: "List Categories"
+        head: "Edit Category"
+        update: "Update"
+      destroy:
+        fail: "Can't Not Delete This Category"
+        success: "Delete Is Success!"
+      update:
+        fail: "Can't Not Update This Category"
+        success: "Update Is Success!"
+      category:
+        confirm: "Are You Want Delete This Category?"
+    users:
+      success: "Delete user success"
+      fail: "Delete user fail"
+      not_admin: "You aren't admin"
+      table_user:
+        title: "Ban user"
+        name_user: "Name"
+        number_illegal: "Number document illegal"
+        view: "View document illegal"
+        delete: "Delete user"
+    transactions:
+      not_found: "Not Found Information"
+      destroy:
+        success: "Transaction Was Destroy"
+        fail: "Transaction Can't Destroy"
+      update:
+        success: "Confirm Success"
+        fail: "Confirm failure"
+
