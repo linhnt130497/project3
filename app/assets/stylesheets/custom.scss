@@ -1,0 +1,443 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'variables';
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 19.2px;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $light-gray;
+}
+
+p {
+  font-size: 17.6px;
+  line-height: 27.2px;
+}
+
+.logo {
+  float: left;
+  font-size: 17.6px;
+  color: $White;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: $White;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $light-gray;
+}
+
+footer a {
+  color: $Davy-Grey;
+}
+
+footer a:hover {
+  color: $Dark;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* header */
+
+.search_header {
+  margin-top: 10px
+}
+
+.icSearch {
+  margin-left: -32px
+}
+
+/*form*/
+
+.error_explanation {
+  color: $red;
+  ul {
+    color: $red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+
+  }
+}
+/* form new user */
+input, textarea, select, .uneditable-input {
+  border: 1px solid $Gray;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+/*form login*/
+
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-login {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: $White;
+  border: 1px solid $gray-light;
+
+
+  .checkbox-label {
+    font-weight: normal;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .checkbox {
+    width: auto;
+    margin-left: 0;
+    display: inline;
+  }
+
+  .form_control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 22.4px;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  a {
+    padding: 0;
+  }
+}
+
+
+/* documents */
+
+.documents {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $gray91;
+  }
+  .user {
+    margin-top: 80px;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: Gray;
+    display: block;
+    margin-left: 60px;
+  }
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+/* friend list */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* form document */
+
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+.upload-drop-zone {
+  color: $gray80;
+  border-style: dashed;
+  border-color: $gray80;
+  line-height: 200px;
+  text-align: center
+}
+
+.upload-drop-zone.drop {
+  color: $Dark;
+  border-color: $Dark;
+}
+
+.file-preview-input {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  color: $gray20;
+  background-color: $White;
+  border-color: $gray80;
+}
+
+/*comment list*/
+
+.pull-left {
+  float: left !important;
+  padding-top: 20px;
+}
+
+.media .media-object {
+  max-width: 120px;
+}
+
+.media-body {
+  position: relative;
+}
+
+.media-date {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.media-date li {
+  padding: 0;
+}
+
+.media-date li:before {
+  margin-left: -2px;
+  margin-right: 2px;
+}
+
+.media-comment {
+  margin-bottom: 20px;
+}
+
+.media-replied {
+  margin: 0 0 20px 50px;
+}
+
+.media-replied .media-heading {
+  padding-left: 6px;
+}
+
+.btn-circle {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+/*reply comments*/
+.reply{
+  width: 300px;
+}
+
+input[type="submit"] {
+  width: 120px;
+}
+
+.reply-date {
+  float: right;
+}
+
+.list-group{
+  padding-top: 15px;
+  color: #4aad94;
+}
+
+/* categories */
+
+.btn-remove {
+  margin-left: 15px;
+}
+
+.category-search {
+  margin-top: 15px;
+}
+
+.btn-add {
+  position: relative;
+  top: -230px;
+  left: 290px;
+}
+
+/* form search users */
+
+.name {
+  margin-top: 15px;
+}
+
+/*home*/
+
+.bannerArea-text {
+    float: left;
+    width: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    padding-left: 10px;
+}
+
+div {
+    display: block;
+}
+
+.textcolor {
+  color: #4aad94;
+ }
+
+

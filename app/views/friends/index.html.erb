@@ -1,0 +1,15 @@
+<% provide :title, @title %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= render "shared/user_info" %>
+  </aside>
+  <div class="col-md-8">
+    <h3 class="col-md-offset-4"><%= @title %></h3>
+    <%if @friends.any? %>
+      <ol class="users">
+        <%= render partial: "friend", collection: @friends, as: :friend %>
+      </ol>
+    <%end %>
+    <%= will_paginate @friends %>
+  </div>
+</div>

@@ -28,6 +28,7 @@ gem "paranoia", "~> 2.2"
 gem "i18n-js"
 gem "jquery-turbolinks"
 gem "figaro"
+gem 'dotenv-rails'
 gem "whenever", require: false
 
 group :development, :test do

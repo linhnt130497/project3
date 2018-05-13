@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :create
   def new; end
 
   def create
@@ -29,4 +30,6 @@ class SessionsController < ApplicationController
     flash[:danger] = t "sessions.flash.error"
     render :new
   end
-end
+
+
+  end

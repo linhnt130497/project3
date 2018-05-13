@@ -1,0 +1,3 @@
+<%= form_for @favorite, method: :delete, remote: true do |f| %>
+  <%= f.submit t("favorite.btn_un"), class: "btn btn-danger" %>
+<% end %>

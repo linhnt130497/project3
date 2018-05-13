@@ -1,0 +1,28 @@
+<div class="row">
+  <aside class="col-md-4">
+    <div id = "info_document">
+      <%= render "documents/document_detail" %>
+    </div>
+    <div class="form-inline">
+      <div class="form-group report">
+        <%= render "comments/report" %>
+      </div>
+      <div class="form-group">
+        <%= render "favorite_form" %>
+      </div>
+    </div>
+    <%= render "comments/modal_report" %>
+  </aside>
+  <div class="col-md-8" id="comments">
+    <div id = "new-comment">
+      <%= render "comment_form" %>
+    </div>
+
+    <div id = "comment-list">
+      <% if @comments.any? %>
+        <%= render partial: "comments/comment", collection: @comments, as: :comment  %>
+      <% end %>
+      <%= will_paginate @comments %>
+    </div>
+  </div>
+</div>

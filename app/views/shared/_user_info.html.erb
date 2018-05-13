@@ -1,0 +1,63 @@
+<section class="user_info">
+  <%= image_tag @user.avatar.url, class: "img-circle", size: Settings.user.avatar %>
+  <h1>
+    <%= @user.name %>
+  </h1>
+</section>
+
+<section class="stats">
+  <div class="stats">
+    <%= link_to friends_path(user_id: @user.id) do %>
+      <%= t ".friend" %>
+      <strong id="friends" class="stat text-center">
+        <%= User.friend_of_user(Friend.friend_list_id(@user.id)).size %>
+      </strong>
+    <% end %>
+
+    <% if current_user? @user %>
+      <%= link_to friend_path(id: @user.id) do %>
+        <%= t ".requested" %>
+        <strong id="request_send" class="stat text-center">
+          <%= size_list_request @user %>
+        </strong>
+      <% end %>
+
+      <%= link_to friend_path(id: @user.id, role: "sender") do %>
+        <%= t ".pending_accept" %>
+        <strong id="request_receiver" class="stat text-center">
+          <%= size_list_pending @user %>
+        </strong>
+      <% end %>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <%= t ".download_times" %>
+      <strong id="down_count" class="stat text-center">
+        <%= @user.down_count %>
+      </strong>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <%= t ".upload_times" %>
+      <strong id="up_count" class="stat text-center">
+        <%= @user.up_count %>
+      </strong>
+    <% end %>
+
+    <% if current_user? @user %>
+      <%= link_to "#" do %>
+        <%= t ".coins" %>
+        <strong id="coin" class="stat text-center">
+          <%= @user.coin %>
+        </strong>
+      <% end %>
+    <% end %>
+
+    <%= link_to search_deleted_url(id: @user.id) do %>
+      <%= t ".document_delete" %>
+      <strong id="document_delete" class="stat text-center">
+        <%= @user.documents.only_deleted.size %>
+      </strong>
+    <% end %>
+  </div>
+</section>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, except: %i(create new)
   before_action :correct_user_admin, only: %i(edit update)
 
-  def edit; end
+  def edit;  end
 
   def new
     @user = User.new

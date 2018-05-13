@@ -10,7 +10,7 @@ default: &default
   password: <%= ENV["DATABASE_PASSWORD"] %>
 
 development:
-<<: *default
+  <<: *default
 
 test:
   <<: *default

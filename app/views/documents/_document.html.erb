@@ -1,0 +1,23 @@
+<li id="document-<%= document.id %>">
+  <span class="content">
+    <h4 class="text-info"> <%= document.name_document %></h4>
+    <%= t ".upload_by", name: document.user.name %>
+  </span>
+  <span class="timestamp">
+    <%= t ".download_times", times: document.history_downloads.size %></br>
+    <%= t ".posted", time: time_ago_in_words(document.created_at) %>
+    <% unless document.deleted_at? %>
+      <% if current_user? document.user %>
+        | <%= link_to document, method: :delete, data: {confirm: t(".confirm")} do %>
+          <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      <% end %> </br>
+      <% if is_loged_in? %>
+        <%= link_to t(".view_detail") , document_path(document.id) %> |
+      <% end %>
+      <%= link_to document.content.url do %>
+        <span class="glyphicon glyphicon-eye-open"></span>
+      <% end %>
+    <% end %>
+  </span>
+</li>
